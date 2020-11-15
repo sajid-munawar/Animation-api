@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 100px;
+            width: 150px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <script>
+        var elem=document.querySelector(".div");
+        elem.animate([
+            {transform:"translate(0,0)"},
+            {transform:"translate(0,250px)",background:"cyan"},
+            {transform:"translate(550px,250px)",background:"green"},
+            {transform:"translate(550px,0)",background:"yellow"},
+            {transform:"translate(0,0)",background:"white"}
+        ],{
+            duration:3000,
+            iterations: Infinity
+        })
+    </script>
+    
+</body>
+</html>

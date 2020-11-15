@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #div {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div"></div>
+    <script> var elem = document.querySelector("#div");
+        elem.animate([
+            { transform: 'translate(0, 0)',background:" cyan" },
+            { transform: 'translate(300px, 0)',background:" red" },
+            { transform: 'translate(300px, 300px)',background:" green" },
+            { transform: 'translate(0,300px)',background:" yellow " },
+            { transform: 'translate(0,0)' },
+        ], {
+            duration: 4000,
+            iterations: Infinity
+        })
+    </script>
+</body>
+
+</html>

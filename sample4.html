@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 100px;
+            width: 100px;
+            background-color:blueviolet ;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+    </div>
+
+        <div><button onclick="animation.reverse()">Reverse</button>
+        <div><button onclick="animation.pause()">Stop</button>
+        <div><button onclick="animation.play()">Run</button>
+    </div>
+    <script>
+    var box=document.querySelector(".div")
+    var animation=box.animate([
+        {transform:"translate(0,0)"},
+        {transform:"translate(700px)"}
+    ],{
+        duration:3000,
+        iterations:Infinity
+
+    })
+    
+
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 100px;
+            width: 100px;         
+            margin: auto;           
+            background-color:blueviolet ;
+            /* border-color:0 0 10px blueviolet; */
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+        <script>
+
+        document.querySelector("div").animate(
+  [
+    { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
+    { color: '#431236', offset: 0.3},
+    { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+  ], {
+    duration: 3000,
+    iterations: Infinity
+  }
+);
+        </script>
+    <!-- 
+
+        <div><button onclick="animation.reverse()">Reverse</button>
+        <div><button onclick="animation.pause()">Stop</button>
+        <div><button onclick="animation.play()">Run</button>
+        <div><button onclick="animation.updatePlaybackRate(animation.playbackRate*1.2)">speed</button>
+        <div><button onclick="animation.updatePlaybackRate(animation.playbackRate*-1)">Reverse</button>
+    </div>
+    <script>
+    var box=document.querySelector(".div")
+    var animation=box.animate[
+  { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
+  { color: '#431236', offset: 0.3},
+  { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+];
+    // animation.addEventListener("hover",animation.play())
+
+        </script> -->
+    
+</body>
+</html>
+<!-- var aliceTumbling = [
+  { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
+  { color: '#431236', offset: 0.3},
+  { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+]; -->

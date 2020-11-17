@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 100px;
+            width: 100px;         
+            margin: auto;           
+            background-color:blueviolet ;
+            /* border-color:0 0 10px blueviolet; */
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <script>
+
+    document.querySelector("div").animate(
+        [
+  { transform: 'translateY(0)' },
+  { transform: 'translateY(80%)' }   
+], {
+  fill: 'forwards',
+  easing: 'steps(4, end)',
+  duration: 5000
+});
+    </script>
+    
+</body>
+</html>

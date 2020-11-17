@@ -19,6 +19,8 @@
         <div><button onclick="animation.reverse()">Reverse</button>
         <div><button onclick="animation.pause()">Stop</button>
         <div><button onclick="animation.play()">Run</button>
+        <div><button onclick="animation.updatePlaybackRate(animation.playbackRate*1.2)">speed</button>
+        <div><button onclick="animation.updatePlaybackRate(animation.playbackRate*-1)">Reverse</button>
     </div>
     <script>
     var box=document.querySelector(".div")
@@ -27,10 +29,11 @@
         {transform:"translate(700px)"}
     ],{
         duration:3000,
-        iterations:Infinity
+        iterations:Infinity,
+        direction:"alternate"
 
     })
-    
+    animation.addEventListener("hover",animation.play())
 
         </script>
     
